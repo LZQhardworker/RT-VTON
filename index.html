@@ -114,7 +114,7 @@
         <p></p>
         <p align="justify"> Quantitative evaluation of try-on task is hard to conduct as there is no ground-truth of the reference person in the target clothes. 
             The Frechet Inception Distance (FID) is adopted to measure the similarity of data distribution between the generated results and the reference data </p>
-        <img src="image/table1.png"  alt="image1" />
+        <img src="image/table1.png"  alt="table1" />
         <div class="videocaption">
             <div>
                 <p align="justify"><strong>Table 1.</strong> Quantitative Comparisons. “N.S.” denotes non-standard. 
@@ -127,11 +127,35 @@
         <p align="justify">Our ablation studies are conducted mainly on analyzing the effectiveness of our Tri-Level Block in Semantic Generation Module (SGM). 
             Three settings are given as: <strong>1)</strong> full RT-VTON with Tri-Level Transform, <strong>2)</strong> RTVTON with plain encoder-decoder connected by residual
 blocks, following, <strong>3)</strong> RT-VTON with Unet as SGM, which is a common backbone in designing the tryon pipelines.</p>
-        <img src="image/3.png"  alt="image1" />
+        <img src="image/3.png"  alt="image3" />
         <div class="videocaption">
             <div>
                 <p align="justify"><strong>Figure 3.</strong> Visual ablation study of Semantic Generation Module (SGM) in RT-VTON. 
                     Tri-Level Transform is compared with plain encoder-decoder and Unet structure.</p>
+            </div>
+        </div>
+        </p><h4>Effectiveness of Non-Local Correspondence</h4>
+        <p></p>
+        <p align="justify">Since the correlation matrix is computed in a downsampled feature space (16 × 12), 
+            we present a patch-based correspondence in image level by manually selected locations in Fig. 4..</p>
+        <img src="image/4.png"  alt="image4" />
+        <div class="videocaption">
+            <div>
+                <p align="justify"><strong>Figure 4.</strong> Visualization of our non-local correspondence given some manually selected positions. 
+                    Since the correlation matrix is computed in downsampled feature space, the corresponding points are shown in patches with the same color.</p>
+            </div>
+        </div>
+        </p><h4>Effectiveness of Gated Attention</h4>
+        <p></p>
+        <p align="justify">we extract the attention masks for the six Tri-Level Blocks used in RTVTON. The first row shows the masks for the clothes code and the bottom row covers the masks for the pose code. 
+            The gated attention transfers the feature in a gradual manner, which coincides nicely with the human intuition. 
+            The initial masks are mixtures of input segmentation, but the clothing shapes and sleeve boundaries are gradually revealed as the parsing code is modulated according to the target clothes. 
+            In the last two columns, we can see the clear sleeve boundary of the “after-try-on” person which helps determine the target clothing shape..</p>
+        <img src="image/5.png"  alt="image4" />
+        <div class="videocaption">
+            <div>
+                <p align="justify"><strong>Figure 5.</strong> Visualization of the attention masks in our local gating mechanism for clothes code (top) and pose code (bottom). 
+                    TLB1-6 denotes the six Tri-Level Blocks we use in our Semantic Generation Module (SGM).</p>
             </div>
         </div>
 
