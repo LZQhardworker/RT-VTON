@@ -66,7 +66,7 @@
           We have two key insights towards the framework design: 
           <strong>1) Semantics transfer</strong>  requires a gradual feature transform on three different levels of clothing representations, 
           namely clothes code, pose code and parsing code. 
-          <strong>2) Geometry transf</strong> requires a regularized image deformation between rigidity and flexibility. 
+          <strong>2) Geometry transfer</strong> requires a regularized image deformation between rigidity and flexibility. 
           Firstly, we predict the semantics of the “after-try-on” person by recurrently refining the tri-level feature codes using local gated attention and non-local correspondence learning. 
           Next, we design a semi-rigid deformation to align the clothing image and the predicted semantics, which preserves local warping similarity. 
           Finally, a canonical try-on synthesizer fuses all the processed information to generate the clothed person image. Extensive experiments on conventional benchmarks along with user studies demonstrate that our framework achieves state-of-the-art performance both quantitatively and qualitatively. 
@@ -86,6 +86,9 @@
                     </li>
                     <li>
                         <a href="/" target="_blank"> arXiv </a>
+                    </li>
+                    <li>
+                        <a href="https://drive.google.com/file/d/1fsCEOxR7f0HOH9sUiajlJA5vVzmpNRLi/view?usp=sharing" target="_blank"> Try-on Results </a>
                     </li>
                 </ul>
             </div>
@@ -112,8 +115,8 @@
         </div>
         </p><h3>Quantitative Results</h3>
         <p></p>
-        <p align="justify"> Quantitative evaluation of try-on task is hard to conduct as there is no ground-truth of the reference person in the target clothes. 
-            The Frechet Inception Distance (FID) is adopted to measure the similarity of data distribution between the generated results and the reference data </p>
+        <!-- <p align="justify"> Quantitative evaluation of try-on task is hard to conduct as there is no ground-truth of the reference person in the target clothes. 
+            The Frechet Inception Distance (FID) is adopted to measure the similarity of data distribution between the generated results and the reference data </p> -->
         <img src="image/table1.png"  alt="table1" />
         <div class="videocaption">
             <div>
@@ -158,13 +161,9 @@ blocks, following, <strong>3)</strong> RT-VTON with Unet as SGM, which is a comm
                     TLB1-6 denotes the six Tri-Level Blocks we use in our Semantic Generation Module (SGM).</p>
             </div>
         </div>
-
-        
        
         <h2 id="citation"> Citation </h2>
         <pre>......</pre>
-        <h2 id="license"> License </h2>
-        <p> ...... </p>
         <h2 id="acknowledgments"> Acknowledgments </h2>
         <p align="justify"> This work is supported by NTU NAP, MOE AcRF Tier 1 (2021-T1-001-088), and under the RIE2020 Industry Alignment Fund – Industry Collaboration Projects (IAF-ICP) Funding Initiative, as well as cash and in-kind contribution from the industry partner(s). </p>
     </div>
