@@ -159,7 +159,178 @@ blocks, following, <strong>3)</strong> RT-VTON with Unet as SGM, which is a comm
         </div>
        
         <h2 id="citation"> Citation </h2>
-        <pre>......</pre>
+        <pre><html lang="" xml:lang="" xmlns="http://www.w3.org/1999/xhtml"><head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <link href="media/graphics/favicon.ico" rel="shortcut icon">
+    <title> Full-Range Virtual Try-On with Recurrent Tri-Level Transform </title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="box_swipe.css">
+    <script src="box_swipe.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Segoe+UI" rel="stylesheet">
+</head>
+
+<body>
+    <!-- SECTION: HEADER -->
+    <div class="n-header">
+    </div>
+    <div class="n-title">
+        <h1> Full-Range Virtual Try-On with Recurrent Tri-Level Transform </h1>
+    </div>
+    <!-- SECTION: AUTHORS -->
+    <div class="n-byline">
+        <div class="byline">
+            <ul class="authors">
+                <li> <a href="https://github.com/LZQhardworker" target="_blank">Han Yang</a> <sup> 1, 2 </sup>
+                </li>
+                <li> <a href="" target="_blank">Xinrui Yu</a> <sup> 3 </sup>
+                </li>
+                <li> <a href="https://liuziwei7.github.io/" target="_blank">Ziwei Liu</a> <sup> ✉️ 4 </sup>
+                </li>
+            </ul>
+            <div class="authors-affiliations-gap"></div>
+            <ul class="authors affiliations">
+                <li>
+                    <sup> 1 </sup> ZMO AI Inc.
+                </li>
+                <li>
+                    <sup> 2 </sup> ETH Zuric
+                </li>
+                <li>
+                    <sup> 3 </sup> Harbin Institute of Technology, Shenzhen
+                </li>
+                <li>
+                    <sup> 4 </sup> S-Lab, Nanyang Technological University
+                </li>
+            </ul>
+            <ul class="authors affiliations">
+                <li>
+                    <sup> ✉️ </sup> Corresponding author.
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- SECTION: MAIN BODY -->
+    <div class="n-article">
+        <!-- teaser -->
+        <div class="l-article video youtube-embed">
+            <iframe class="l-article youtube-video" width="100%" height="100%" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+        </div>
+        <!-- abstract -->
+        <h2 id="abstract"> Abstract </h2>
+        <p align="justify"> Virtual try-on aims to transfer a target clothing image onto a reference person. 
+          Though great progress has been achieved, the functioning zone of existing works is still limited to <strong>standard clothes </strong>
+          (e.g., plain shirt without complex laces or ripped effect), 
+          while the vast complexity and variety of  <strong>non-standard clothes</strong> (e.g., off-shoulder shirt, wordshoulder dress) are largely ignored. </p>
+        <p align="justify"> In this work, we propose a principled framework, <strong>Recurrent Tri-Level Transform (RT-VTON)</strong> , 
+          that performs full-range virtual try-on on both standard and non-standard clothes. 
+          We have two key insights towards the framework design: 
+          <strong>1) Semantics transfer</strong>  requires a gradual feature transform on three different levels of clothing representations, 
+          namely clothes code, pose code and parsing code. 
+          <strong>2) Geometry transfer</strong> requires a regularized image deformation between rigidity and flexibility. 
+          Firstly, we predict the semantics of the “after-try-on” person by recurrently refining the tri-level feature codes using local gated attention and non-local correspondence learning. 
+          Next, we design a semi-rigid deformation to align the clothing image and the predicted semantics, which preserves local warping similarity. 
+          Finally, a canonical try-on synthesizer fuses all the processed information to generate the clothed person image. Extensive experiments on conventional benchmarks along with user studies demonstrate that our framework achieves state-of-the-art performance both quantitatively and qualitatively. 
+          Notably, RT-VTON shows compelling results on a wide range of non-standard clothe</p>
+        <!-- paper links -->
+        <h2 id="links"> Links </h2>
+        <div class="grid download-section">
+            <div class="download-thumb">
+                <a href="image/RT_VITON.pdf" target="_blank">
+                    <img class="dropshadow" src="image/front_cover.png">
+                </a>
+            </div>
+            <div class="download-links">
+                <ul>
+                    <li>
+                        <a href="image/RT_VITON.pdf" target="_blank"> paper pdf </a>
+                    </li>
+                    <li>
+                        <a href="/" target="_blank"> arXiv </a>
+                    </li>
+                    <li>
+                        <a href="https://drive.google.com/file/d/1tl-hvPUcTXbBN_3TKyWViv9y_TN25LpZ/view?usp=sharing" target="_blank"> test results </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <h2 id="videos"> Experiments </h2>
+        <p>
+        </p><h3>Qualitative results</h3>
+        <p></p>
+        <p align="justify"> The following figures demonstrate RT-VITON performes better than DCTON, ACGPN and CPVITON+. </p>
+        <img src="image/1.png"  alt="image1" />
+        <div class="videocaption">
+            <div>
+                <p align="justify"><strong>Figure 1.</strong> Visual comparison of four virtual try-on methods in a standard to non-standard manner (top to bottom). 
+                Four methods perform quite well for the standard cases without shape changes, but fail drastically when performing large shape transformation towards nonstandard cases. 
+                With our Tri-Level Transform and semi-rigid deformation, RT-VTON produces photo-realistic results for the full-range of clothing types and preserves the fine details of the clothing texture.</p>
+            </div>
+        </div>
+        <img src="image/2.png"  alt="image2" />
+        <div class="videocaption">
+            <div>
+                <p align="justify"><strong>Figure 2.</strong> The visual comparison of the image deformation methods between the TPS warping and our semi-rigid deformation. 
+                    State-of-the-art TPS-based try-on method DCTON is chosen as our baseline to evaluate the effectiveness of our method.</p>
+            </div>
+        </div>
+        </p><h3>Quantitative Results</h3>
+        <p></p>
+        <!-- <p align="justify"> Quantitative evaluation of try-on task is hard to conduct as there is no ground-truth of the reference person in the target clothes. 
+            The Frechet Inception Distance (FID) is adopted to measure the similarity of data distribution between the generated results and the reference data </p> -->
+        <img src="image/table1.png"  alt="table1" />
+        <div class="videocaption">
+            <div>
+                <p align="justify"><strong>Table 1.</strong> Quantitative Comparisons. “N.S.” denotes non-standard. 
+                    We show the Frechet Inception Distance (FID) and user study results of four methods. FID is the lower the better. 
+                    User study is given by the preference ratio for our method, which is the higher the better. ‘-’ indicates the placeholder.</p>
+            </div>
+        </div>
+        </p><h3>Ablation Study</h3>
+        <p></p>
+        <p align="justify">Our ablation studies are conducted mainly on analyzing the effectiveness of our Tri-Level Block in Semantic Generation Module (SGM). 
+            Three settings are given as: <strong>1)</strong> full RT-VTON with Tri-Level Transform, <strong>2)</strong> RTVTON with plain encoder-decoder connected by residual
+blocks, following, <strong>3)</strong> RT-VTON with Unet as SGM, which is a common backbone in designing the tryon pipelines.</p>
+        <img src="image/3.png"  alt="image3" />
+        <div class="videocaption">
+            <div>
+                <p align="justify"><strong>Figure 3.</strong> Visual ablation study of Semantic Generation Module (SGM) in RT-VTON. 
+                    Tri-Level Transform is compared with plain encoder-decoder and Unet structure.</p>
+            </div>
+        </div>
+        </p><h3>Effectiveness of Non-Local Correspondence</h3>
+        <p></p>
+        <p align="justify">Since the correlation matrix is computed in a downsampled feature space (16 × 12), 
+            we present a patch-based correspondence in image level by manually selected locations in Fig. 4..</p>
+        <img src="image/4.png"  alt="image4" />
+        <div class="videocaption">
+            <div>
+                <p align="justify"><strong>Figure 4.</strong> Visualization of our non-local correspondence given some manually selected positions. 
+                    Since the correlation matrix is computed in downsampled feature space, the corresponding points are shown in patches with the same color.</p>
+            </div>
+        </div>
+        </p><h3>Effectiveness of Gated Attention</h3>
+        <p></p>
+        <img src="image/5.png"  alt="image4" />
+        <div class="videocaption">
+            <div>
+                <p align="justify"><strong>Figure 5.</strong> Visualization of the attention masks in our local gating mechanism for clothes code (top) and pose code (bottom). 
+                    TLB1-6 denotes the six Tri-Level Blocks we use in our Semantic Generation Module (SGM).</p>
+            </div>
+        </div>
+       
+        <h2 id="citation"> Citation </h2>
+        <pre>"@inproceedings{Chan2021,
+            author = {Eric R. Chan and Connor Z. Lin and Matthew A. Chan and Koki Nagano and Boxiao Pan and Shalini De Mello and Orazio Gallo and Leonidas Guibas and Jonathan Tremblay and Sameh Khamis and Tero Karras and Gordon Wetzstein},
+            title = {Efficient Geometry-aware {3D} Generative Adversarial Networks},
+            booktitle = {arXiv},
+            year = {2021}
+          }"</pre>
+        <h2 id="acknowledgments"> Acknowledgments </h2>
+        <p align="justify"> This work is supported by NTU NAP, MOE AcRF Tier 1 (2021-T1-001-088), and under the RIE2020 Industry Alignment Fund – Industry Collaboration Projects (IAF-ICP) Funding Initiative, as well as cash and in-kind contribution from the industry partner(s). </p>
+    </div>
+    <div class="n-footer">
+    </div></pre>
         <h2 id="acknowledgments"> Acknowledgments </h2>
         <p align="justify"> This work is supported by NTU NAP, MOE AcRF Tier 1 (2021-T1-001-088), and under the RIE2020 Industry Alignment Fund – Industry Collaboration Projects (IAF-ICP) Funding Initiative, as well as cash and in-kind contribution from the industry partner(s). </p>
     </div>
